@@ -4,10 +4,15 @@ const Sequelize = require('sequelize');
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const user = sequelizeClient.define('user', {
-    text: {
+  const users = sequelizeClient.define('users', {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    name: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: true
     }
   }, {
     hooks: {
@@ -17,10 +22,10 @@ module.exports = function (app) {
     }
   });
 
-  user.associate = function (models) { // eslint-disable-line no-unused-vars
+  users.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return user;
+  return users;
 };
