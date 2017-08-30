@@ -15,11 +15,11 @@ module.exports = function (app) {
       allowNull: true
     },
     lat: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.DECIMAL,
       allowNull: false
     },
     lng: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.DECIMAL,
       allowNull: false
     }
   }, {
