@@ -1,4 +1,11 @@
 {
-  "host": "feathers-server-app.feathersjs.com",
-  "port": "PORT"
+  "host": "localhost",
+  "port": 8100,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "postgres": "postgres://postgres:@localhost:5432/feathers_server"
+
 }
