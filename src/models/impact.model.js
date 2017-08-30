@@ -19,15 +19,15 @@ module.exports = function (app) {
       type: Sequelize.INTEGER,
       allowNull: false
     },
-    user_id: {
-      type: Sequelize.INTEGE,
+    users_id: {
+      type: Sequelize.INTEGER,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id'
       }
     },
     pothole_id: {
-      type: Sequelize.INTEGE,
+      type: Sequelize.INTEGER,
       references: {
         model: 'pothole',
         key: 'id'
