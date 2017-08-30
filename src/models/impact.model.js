@@ -5,9 +5,33 @@ const Sequelize = require('sequelize');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const impact = sequelizeClient.define('impact', {
-    text: {
-      type: Sequelize.STRING,
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    date: {
+      type: Sequelize.DATE,
+      defaultValue: Sequelize.NOW,
       allowNull: false
+    },
+    force: {
+      type: Sequelize.INTEGER,
+      allowNull: false
+    },
+    user_id: {
+      type: Sequelize.INTEGE,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    },
+    pothole_id: {
+      type: Sequelize.INTEGE,
+      references: {
+        model: 'pothole',
+        key: 'id'
+      }
     }
   }, {
     hooks: {

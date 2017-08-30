@@ -5,9 +5,14 @@ const Sequelize = require('sequelize');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const user = sequelizeClient.define('user', {
-    text: {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    name: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: true
     }
   }, {
     hooks: {

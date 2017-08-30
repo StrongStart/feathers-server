@@ -5,16 +5,21 @@ const Sequelize = require('sequelize');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const pothole = sequelizeClient.define('pothole', {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     name: {
       type: Sequelize.STRING,
       allowNull: true
     },
     lat: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
     lng: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.INTEGER,
       allowNull: false
     }
   }, {
