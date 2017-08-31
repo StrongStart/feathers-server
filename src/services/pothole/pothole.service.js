@@ -7,12 +7,10 @@ const filters = require('./pothole.filters');
 module.exports = function () {
   const app = this;
   const Model = createModel(app);
-  const paginate = app.get('paginate');
 
   const options = {
     name: 'pothole',
     Model,
-    paginate
   };
 
   // Initialize our service with any options it requires

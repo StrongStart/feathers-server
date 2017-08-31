@@ -7,12 +7,10 @@ const filters = require('./impact.filters');
 module.exports = function () {
   const app = this;
   const Model = createModel(app);
-  const paginate = app.get('paginate');
 
   const options = {
     name: 'impact',
     Model,
-    paginate
   };
 
   // Initialize our service with any options it requires
