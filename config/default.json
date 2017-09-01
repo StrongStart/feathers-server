@@ -1,6 +1,0 @@
-{
-  "host": "localhost",
-  "port": 3030,
-  "public": "../public/",
-  "postgres": "postgres://postgres:@localhost:5432/feathers_server"
-}
