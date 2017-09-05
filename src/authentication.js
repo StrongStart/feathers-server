@@ -1,8 +1,9 @@
+require('dotenv').config();
 const authentication = require('feathers-authentication');
 const jwt = require('feathers-authentication-jwt');
 
 const oauth2 = require('feathers-authentication-oauth2');
-const FacebookStrategy = require('passport-facebook');
+const FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = function () {
   const app = this;
@@ -14,7 +15,10 @@ module.exports = function () {
 
   app.configure(oauth2(Object.assign({
     name: 'facebook',
-    Strategy: FacebookStrategy
+    Strategy: FacebookStrategy,
+    clientId: process.env.FB_CLIENT_ID,
+    clientSecret: process.env.FB_CLIENT_SECRET,
+    scope: ['public_profile', 'email']
   }, config.facebook)));
 
   // The `authentication` service is used to create a JWT.

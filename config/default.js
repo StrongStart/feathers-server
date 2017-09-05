@@ -4,7 +4,7 @@ module.exports = {
   'host': 'localhost',
   'port': 3030,
   'public': '../public/',
-  'postgres': 'postgres://postgres:@localhost:5432/feathers_server',
+  'postgres': 'postgres://postgres:password@localhost:5432/feathers-server',
   'authentication': {
     'secret': process.env.AUTH_SECRET,
     'strategies': [
@@ -16,7 +16,7 @@ module.exports = {
       'header': {
         'type': 'access'
       },
-      'audience': 'http://54.163.239.254:3000',
+      'audience': 'http://localhost:3000',
       'subject': 'anonymous',
       'issuer': 'feathers',
       'algorithm': 'HS256',
