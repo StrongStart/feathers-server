@@ -1,10 +1,10 @@
 require('dotenv').config();
 
 module.exports = {
-  'host': 'localhost',
+  'host': process.env.DB_URL,
   'port': 3030,
   'public': '../public/',
-  'postgres': 'postgres://postgres:password@localhost:5432/feathers-server',
+  'postgres': process.env.DB_URL,
   'authentication': {
     'secret': process.env.AUTH_SECRET,
     'strategies': [
