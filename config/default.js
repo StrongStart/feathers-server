@@ -16,7 +16,7 @@ module.exports = {
       'header': {
         'type': 'access'
       },
-      'audience': 'http://localhost:3000',
+      'audience': process.env.HOST,
       'subject': 'anonymous',
       'issuer': 'feathers',
       'algorithm': 'HS256',
@@ -32,13 +32,8 @@ module.exports = {
       ],
       'profileFields': [
         'id',
-        'displayName',
         'first_name',
         'last_name',
-        'email',
-        'gender',
-        'profileUrl',
-        'birthday',
         'picture',
         'permissions'
       ]
