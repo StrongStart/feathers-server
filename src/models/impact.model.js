@@ -16,7 +16,7 @@ module.exports = function (app) {
       allowNull: false
     },
     force: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.ARRAY(Sequelize.INTEGER),
       allowNull: false
     },
     users_id: {
