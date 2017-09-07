@@ -18,7 +18,7 @@ module.exports = function () {
     Strategy: FacebookStrategy,
     clientId: process.env.FB_CLIENT_ID,
     clientSecret: process.env.FB_CLIENT_SECRET,
-    successRedirect: '/',
+    callbackURL: `http://${process.env.HOST}:3030/auth/facebook/callback`,
     scope: ['public_profile', 'email']
   }, config.facebook)));
 
@@ -36,3 +36,5 @@ module.exports = function () {
     }
   });
 };
+
+//http://localhost:3030/auth/facebook/callback scope=public profile & email client_id=150567172197047
