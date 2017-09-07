@@ -18,7 +18,7 @@ module.exports = function () {
     Strategy: FacebookStrategy,
     clientId: process.env.FB_CLIENT_ID,
     clientSecret: process.env.FB_CLIENT_SECRET,
-    callbackURL: `http://${process.env.HOST}:3030/auth/facebook/callback`,
+    callbackPath: '/auth/facebook/callback',
     scope: ['public_profile', 'email']
   }, config.facebook)));
 
