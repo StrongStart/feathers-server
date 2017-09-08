@@ -5,8 +5,14 @@ const Sequelize = require('sequelize');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const users = sequelizeClient.define('users', {
-    facebookId: { type: Sequelize.STRING },
-
+    token: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    name: {
+      type: Sequelize.STRING,
+      allowNull: false
+    }
   }, {
     hooks: {
       beforeCount(options) {
