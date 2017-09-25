@@ -148,6 +148,10 @@ header.masthead {
         max-width: 325px; } }
 
 section.download {
+  background: #160F29;
+  background: -webkit-linear-gradient(#160F29, #160F32);
+  background: linear-gradient(#160F29, #160F32);
+  color: white;
   position: relative;
   padding: 150px 0; }
   section.download h2 {
@@ -169,12 +173,18 @@ section.download {
       font-size: 70px; } }
 
 section.contact {
-  text-align: center; }
+  text-align: center; 
+  background: #F3DFC1;
+  background: -webkit-linear-gradient(#F3DFC1, #F3DFC7);
+  background: linear-gradient(#F3DFC1, #F3DFC7);}
   section.contact h2 {
     margin-top: 0;
     margin-bottom: 25px; }
     section.contact h2 i {
       color: #dd4b39; }
+  section.contact a {
+    color: #368F8B;
+  }
 
 footer {
   padding: 25px 0;
@@ -194,9 +204,9 @@ footer {
 
 .bg-primary {
   background: #246A73;
-  /* background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539); } */
-}
+  background: -webkit-linear-gradient(#246A73, #246A78);
+  background: linear-gradient(#246A73, #246A78); }
+
 .text-primary {
   color: #fdcc52; }
 
